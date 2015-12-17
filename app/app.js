@@ -6,8 +6,8 @@ angular.module('myApp', [
 	'myApp.security',
 	'myApp.home',
 	'myApp.account',
-	'myApp.chat',
-	'myApp.login'
+	'myApp.login',
+	'myApp.appointment'
 	])
 
 .config(['$routeProvider', function ($routeProvider) {
@@ -23,17 +23,3 @@ angular.module('myApp', [
   	$rootScope.user=user;
   });
 }]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-

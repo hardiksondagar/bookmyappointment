@@ -1,0 +1,10 @@
+<form class="form-signin" name="appointmentForm">
+	<h3 class="form-signin-heading">Quick Appointment</h3>
+	<label for="inputName" class="sr-only">Name</label>
+	<input type="text" id="inputName" class="form-control form-control-top" placeholder="Full Name" ng-model="appointment.name" ng-hide="loggedIn">
+	<label for="inputEmail" class="sr-only">Email address</label>
+	<input type="email" id="inputEmail" class="form-control" placeholder="Email address" ng-model="appointment.email" ng-hide="loggedIn">
+	<label for="inputComment" class="sr-only">Comment</label>
+	<input type="text" id="inputComment" class="form-control form-control-bottom" placeholder="Comment" ng-model="appointment.message">
+	<button class="btn btn-lg btn-warning btn-block" type="submit" ng-click="addAppointment(appointment);appointment=null">Quick Appointment</button>
+</form>
