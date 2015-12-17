@@ -5,12 +5,17 @@
   "homepage": "https://github.com/hardiksondagar/bookmyappointment",
   "license": "MIT",
   "dependencies": {
-    "angular": "latest",
     "angular-sanitize": "latest",
-    "firebase": "latest",
-    "angularfire": "latest",
     "bootstrap": "latest",
     "font-awesome": "latest",
-    "angular-ui-router":"latest"
+    "angular-ui-router":"latest",    
+    "angular": "latest",
+    "angular-route":"latest",
+    "angular-loader": "latest",
+    "angular-mocks": "latest",
+    "html5-boilerplate": "~4.3.0",
+    "firebase":"latest",
+    "angularfire": "latest",
+    "mockfirebase": "latest"
   }
 }

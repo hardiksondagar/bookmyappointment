@@ -1,0 +1,13 @@
+<div class="jumbotron">
+	<h2><strong>BookMyAppointment!</strong></h2>
+	<p>AngularFire app to book appointment</p>
+	<p ng-hide="loggedIn">
+		<a href="#/chat" class="btn btn-warning btn-lg">Quick Appoitment</a>
+		<a uhref="#/register" class="btn btn-warning btn-lg">Student Register</a>
+	</p>
+	<p ng-show="loggedIn">
+		<a href="#/chat" class="btn btn-warning btn-lg">Make Appoitment</a>
+	</p>
+	<p class="status good" ng-show="loggedIn">Hello! You are logged in with id {{user.password.email}}.</p>
+	
+</div>

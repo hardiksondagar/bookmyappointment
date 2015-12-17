@@ -45,6 +45,17 @@ body {
   border-color: #FFEB3B;
 }
 
+.panel-warning
+{
+ /*background-color: #FFEB3B;*/
+ border-color: #FFEB3B; 
+}
+.panel-warning > .panel-heading
+{
+ background-color: #FFEB3B;
+ border-color: #FFEB3B; 
+}
+
 .padding-20
 {
   padding:20px;
