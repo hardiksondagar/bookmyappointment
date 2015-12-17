@@ -1,0 +1,16 @@
+{
+  "name": "bookmyappointment",
+  "description": "AngularFire app to book appointment.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/hardiksondagar/bookmyappointment",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "latest",
+    "angular-sanitize": "latest",
+    "firebase": "latest",
+    "angularfire": "latest",
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "angular-ui-router":"latest"
+  }
+}
