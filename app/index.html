@@ -33,9 +33,9 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#/chat" ng-hide="loggedIn"><strong>Quick Appointment</strong></a></li>
+            <li><a href="#/appointment" ng-hide="loggedIn">Quick Appointment</a></li>
             <li><a href="#/login" ng-hide="loggedIn">Login</a></li>
-            <li><a href="#/chat" ng-show="loggedIn"><strong>Make Appointment</strong></a></li>
+            <li><a href="#/appointment" ng-show="loggedIn">Make Appointment</a></li>
             <li><a href="#/account" ng-show="loggedIn">Account</a></li>
           </ul>
         </div>
@@ -72,6 +72,28 @@
   <script src="account/account.js"></script>
   <script src="appointment/appointment.js"></script>
   <script src="login/login.js"></script>
+  <script>
+   $(document).on('click','.navbar-collapse.in',function(e) {
+    console.log('here');
+    console.log($(e.target));
+    if( $(e.target).is('a') ) {
+      $(this).collapse('hide');
+    }
+  });
+ </script>
+ <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Ubuntu::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
 
 </body>
 </html>

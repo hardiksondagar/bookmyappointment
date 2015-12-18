@@ -1,17 +1,17 @@
-<div class="panel panel-warning">
+<div class="panel panel-light">
     <div class="panel-heading">Update Profile</div>
     <div class="panel-body">
         <form class="form-horizontal">
             <fieldset>
                 <div class="form-group">
-                 <label class="col-sm-2 control-label">Name</label>
-                 <div class="col-sm-10">
+                 <label class="col-sm-4 control-label">Name</label>
+                 <div class="col-sm-6">
                      <input type="text" class="form-control" placeholder="Full Name" name="name" ng-model="profile.name"/>
                  </div>
              </div>
              <div class="form-group">
-                 <label class="col-sm-2 control-label">Email</label>
-                 <div class="col-sm-10">
+                 <label class="col-sm-4 control-label">Email</label>
+                 <div class="col-sm-6">
                      <input type="text" class="form-control" placeholder="Email" name="email" ng-model="profile.email" readonly="" />
                  </div>
              </div>
@@ -19,33 +19,33 @@
      </form>
  </div>
 </div>
-<div class="panel panel-warning">
+<div class="panel panel-light">
     <div class="panel-heading">Change Password</div>
     <div class="panel-body">
         <form class="form-horizontal">
             <fieldset>
                 <div class="form-group">
-                 <label class="col-sm-2 control-label">Old Password</label>
-                 <div class="col-sm-10">
+                 <label class="col-sm-4 control-label">Old Password</label>
+                 <div class="col-sm-6">
                      <input  class="form-control" placeholder="Old Password" type="password" ng-keypress="clear()" ng-model="oldpass">
                  </div>
              </div>
 
              <div class="form-group">
-                 <label class="col-sm-2 control-label">New Password</label>
-                 <div class="col-sm-10">
+                 <label class="col-sm-4 control-label">New Password</label>
+                 <div class="col-sm-6">
                      <input  class="form-control" placeholder="New Password" type="password" ng-keypress="clear()" ng-model="newpass"/>
                  </div>
              </div>
              <div class="form-group">
-                 <label class="col-sm-2 control-label">Confirm Password</label>
-                 <div class="col-sm-10">
+                 <label class="col-sm-4 control-label">Confirm Password</label>
+                 <div class="col-sm-6">
                      <input  class="form-control" placeholder="Confirm Password" type="password" ng-keypress="clear()" ng-model="confirm"/>
                  </div>
              </div>
              <div class="form-group">
-                 <label class="col-sm-2 control-label"></label>
-                 <div class="col-sm-10">
+                 <label class="col-sm-4 control-label"></label>
+                 <div class="col-sm-6">
                      <button ng-click="changePassword(oldpass, newpass, confirm)" class="btn btn-warning">Change Password</button>
                      <p class="error" ng-show="err">{{err}}</p>
                      <p class="good" ng-show="msg">{{msg}}</p>
@@ -55,26 +55,26 @@
      </form>
  </div>
 </div>
-<div class="panel panel-warning">
+<div class="panel panel-light">
     <div class="panel-heading">Change Email</div>
     <div class="panel-body">
         <form class="form-horizontal">
             <fieldset>
                <div class="form-group">
-                 <label class="col-sm-2 control-label">New Email</label>
-                 <div class="col-sm-10">
+                 <label class="col-sm-4 control-label">New Email</label>
+                 <div class="col-sm-6">
                      <input  class="form-control" placeholder="New Email" type="email" ng-keypress="clear()" ng-model="newEmail"/>
                  </div>
              </div>
              <div class="form-group">
-                 <label class="col-sm-2 control-label">Password</label>
-                 <div class="col-sm-10">
+                 <label class="col-sm-4 control-label">Password</label>
+                 <div class="col-sm-6">
                      <input  class="form-control" placeholder="New Email" type="email" ng-keypress="clear()" ng-model="pass"/>
                  </div>
              </div>
              <div class="form-group">
-                 <label class="col-sm-2 control-label"></label>
-                 <div class="col-sm-10">
+                 <label class="col-sm-4 control-label"></label>
+                 <div class="col-sm-6">
                      <button ng-click="changeEmail(pass, newEmail)" class="btn btn-warning">Update Email</button>
                      <p class="error" ng-show="emailerr">{{emailerr}}</p>
                      <p class="good" ng-show="emailmsg">{{emailmsg}}</p>
