@@ -36,6 +36,7 @@
             <li><a href="#/appointment" ng-hide="loggedIn">Quick Appointment</a></li>
             <li><a href="#/login" ng-hide="loggedIn">Login</a></li>
             <li><a href="#/appointment" ng-show="loggedIn">Make Appointment</a></li>
+            <li><a href="#/appointments" ng-show="loggedIn">My Appointments</a></li>
             <li><a href="#/account" ng-show="loggedIn">Account</a></li>
           </ul>
         </div>
@@ -70,8 +71,10 @@
 
   <script src="home/home.js"></script>
   <script src="account/account.js"></script>
-  <script src="appointment/appointment.js"></script>
   <script src="login/login.js"></script>
+  <script src="appointment/appointment.js"></script>
+  <script src="appointments/appointments.js"></script>
+  
   <script>
    $(document).on('click','.navbar-collapse.in',function(e) {
     console.log('here');

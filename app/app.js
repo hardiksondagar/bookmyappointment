@@ -7,7 +7,8 @@ angular.module('myApp', [
 	'myApp.home',
 	'myApp.account',
 	'myApp.login',
-	'myApp.appointment'
+	'myApp.appointment',
+	'myApp.appointments'
 	])
 
 .config(['$routeProvider', function ($routeProvider) {

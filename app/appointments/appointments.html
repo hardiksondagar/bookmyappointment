@@ -1,0 +1,21 @@
+<div class="jumbotron">
+	<h2>Appointments</h2>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Email</th>
+				<th>Info</th>
+				<th>Is Registed</th>
+				<th>Actions</th>
+			</tr>
+		</thead> 
+		<tbody> 
+			<tr ng-repeat="appointment in appointments"> 
+				<td>{{appointment.email}}</td>
+				<td>{{appointment.message}}</td>
+				<td>{{appointment.isRegistered?'Yes':'No'}}</td>
+				<td><button class="btn btn-warning btn-sm">Delete</button></td>
+			</tr> 
+		</tbody>
+	</table>
+</div>
