@@ -1,0 +1,29 @@
+{
+   "rules": {
+      ".read": false,
+      ".write": false,
+      "appointments": {
+        ".read": "root.child('users').child(auth.uid).child('role').val() == 'admin' ",
+        ".write": true,
+        "$uid":{
+          ".read": "$uid=='quick' || auth.uid == $uid",
+          ".write": "auth.uid == $uid"
+        }
+      },
+      "users": {
+         "$user": {
+            ".read": "auth.uid === $user",
+            ".write": "auth.uid === $user && (!newData.exists() || newData.hasChildren())",
+            "name": {
+               ".validate": "newData.isString() && newData.val().length <= 2000"
+            },
+            "email": {
+               ".validate": "newData.isString() && newData.val().length <= 2000"
+            },
+            "$other": {
+               ".validate": false
+            }
+         }
+      }
+   }
+}
