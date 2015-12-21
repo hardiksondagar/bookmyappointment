@@ -5,10 +5,11 @@ angular.module('firebase.auth', ['firebase', 'firebase.utils'])
 
 
 .service('Profile', ['$firebaseObject', 'fbutil', 'Auth', function($firebaseObject, fbutil, Auth) {
-	var auth=Auth.$getAuth();
+	
 	
 	return {
 		get: function () {
+			var auth=Auth.$getAuth();
 			if(auth)
 			{
 				var ref=fbutil.ref('users', auth.uid);

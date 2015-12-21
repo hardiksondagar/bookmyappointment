@@ -1,29 +1,38 @@
 <div class="jumbotron">
 	<h2>My Appointments</h2>
-	<table class="table table-striped" ng-if="myappointments">
+	<table class="table table-striped" ng-hide="isAdmin">
 		<thead>
 			<tr>
-				<th>Info</th>
-				<th>Date</th>
+				<th ng-click="order('message')">Details 
+					<span class="sortorder" ng-show="predicate === 'message'" ng-class="{'fa fa-caret-down':reverse,'fa fa-caret-up':!reverse}"></span>
+				</th>
+				<th ng-click="order('date')">Date
+					<span class="sortorder" ng-show="predicate === 'date'" ng-class="{'fa fa-caret-down':reverse,'fa fa-caret-up':!reverse}"></span>
+				</th>
 				<th>Actions</th>
 			</tr>
 		</thead> 
 		<tbody> 
-			<tr ng-repeat="appointment in myappointments"> 
+			<tr ng-repeat="appointment in appointments"> 
 				<td>{{appointment.message}}</td>
-				<td>{{appointment.date}}</td>
-				<td>{{appointment.isRegistered?'Yes':'No'}}</td>
-				<td><button class="btn btn-warning btn-sm" ng-click="myappointments.$remove(appointment)">Delete</button></td>
+				<td>{{appointment.date | date:'medium'}}</td>
+				<td><button class="btn btn-warning btn-sm" ng-click="appointments.$remove(appointment)">Delete</button></td>
 			</tr> 
 		</tbody>
 	</table>
-	<table class="table table-striped" ng-if="rawData">
+	<table class="table table-striped" ng-if="isAdmin">
 
 		<thead>
 			<tr>
-				<th>User</th>
-				<th>Details</th>
-				<th>Type</th>
+				<th ng-click="order('name')">User 
+					<span class="sortorder" ng-show="predicate === 'name'" ng-class="{'fa fa-caret-down':reverse,'fa fa-caret-up':!reverse}"></span>
+				</th>
+				<th ng-click="order('date')">Details
+					<span class="sortorder" ng-show="predicate === 'date'" ng-class="{'fa fa-caret-down':reverse,'fa fa-caret-up':!reverse}"></span>
+				</th>
+				<th ng-click="order('isRegistered')">Type
+					<span class="sortorder" ng-show="predicate === 'isRegistered'" ng-class="{'fa fa-caret-down':reverse,'fa fa-caret-up':!reverse}"></span>
+				</th>
 				<th><input type="text" class="form-control input-sm" placeholder="Search" ng-model="search"></th>
 			</tr>
 		</thead> 
