@@ -1,20 +1,49 @@
 <div class="jumbotron">
-	<h2>Appointments</h2>
-	<table class="table table-striped">
+	<h2>My Appointments</h2>
+	<table class="table table-striped" ng-if="myappointments">
 		<thead>
 			<tr>
-				<th>Email</th>
 				<th>Info</th>
-				<th>Is Registed</th>
+				<th>Date</th>
 				<th>Actions</th>
 			</tr>
 		</thead> 
 		<tbody> 
-			<tr ng-repeat="appointment in appointments"> 
-				<td>{{appointment.email}}</td>
+			<tr ng-repeat="appointment in myappointments"> 
 				<td>{{appointment.message}}</td>
+				<td>{{appointment.date}}</td>
 				<td>{{appointment.isRegistered?'Yes':'No'}}</td>
-				<td><button class="btn btn-warning btn-sm">Delete</button></td>
+				<td><button class="btn btn-warning btn-sm" ng-click="myappointments.$remove(appointment)">Delete</button></td>
+			</tr> 
+		</tbody>
+	</table>
+	<table class="table table-striped" ng-if="rawData">
+
+		<thead>
+			<tr>
+				<th>User</th>
+				<th>Details</th>
+				<th>Type</th>
+				<th><input type="text" class="form-control input-sm" placeholder="Search" ng-model="search"></th>
+			</tr>
+		</thead> 
+		<tbody> 
+			<tr ng-repeat="appointment in appointments | filter:search"> 
+				<td>
+					<strong>{{appointment.name}}</strong><br>
+					{{appointment.email}}
+				</td>
+				<td>
+					<div ng-if="appointment.date">
+						<strong>Time</strong><br>{{appointment.date | date:'medium'}}
+					</div>
+
+					<div ng-if="appointment.message">
+						<strong>Message</strong><br>{{appointment.message}}
+					</div>
+				</td>
+				<td><label class="label label-info">{{appointment.isRegistered?'Registed':'Quick'}}</label></td>
+				<td><button class="btn btn-warning btn-sm" ng-click="myappointments.$remove(appointment)">Delete</button></td>
 			</tr> 
 		</tbody>
 	</table>

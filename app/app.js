@@ -17,10 +17,11 @@ angular.module('myApp', [
 	});
 }])
 
-.run(['$rootScope', 'Auth', function($rootScope, Auth) {
+.run(['$rootScope', 'Auth', 'Profile',function($rootScope, Auth,Profile) {
   // track status of authentication
   Auth.$onAuth(function(user) {
   	$rootScope.loggedIn = !!user;
-  	$rootScope.user=user;
+  	$rootScope.user=Profile.get();
+  	
   });
 }]);
