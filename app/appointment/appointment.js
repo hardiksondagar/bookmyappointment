@@ -3,7 +3,7 @@
 
   var app = angular.module('myApp.appointment', ['ngRoute', 'firebase.utils', 'firebase','ui.bootstrap.datetimepicker']);
 
-  app.controller('AppointmentCtrl', ['$scope','fbutil','$firebaseArray','Profile',function($scope, fbutil,$firebaseArray,Profile) {
+  app.controller('AppointmentCtrl', ['$scope','fbutil','$firebaseArray','$location','Profile',function($scope, fbutil,$firebaseArray,$location, Profile) {
 
     $scope.user=Profile.get();  
 
@@ -12,7 +12,10 @@
       newAppointment.isRegistered=false;
       var ref = fbutil.ref('appointments','quick');
       var list = $firebaseArray(ref);
-      list.$add(newAppointment);
+      list.$add(newAppointment).then(function()
+      {
+        $location.path('/appointments');
+      });
     }
 
     $scope.addAppointment = function(newAppointment) {
@@ -36,7 +39,10 @@
 
           var ref = fbutil.ref('appointments',$scope.user.$id);
           var list = $firebaseArray(ref);
-          list.$add(newAppointment);
+          list.$add(newAppointment).then(function()
+          {
+            $location.path('/appointments');
+          });
 
         });
       } else {

@@ -1,50 +1,50 @@
 "use strict";
 angular.module('myApp.login', ['firebase.utils', 'firebase.auth', 'ngRoute'])
 
-  .config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/login', {
-      controller: 'LoginCtrl',
-      templateUrl: 'login/login.html'
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/login', {
+    controller: 'LoginCtrl',
+    templateUrl: 'login/login.html'
+  });
+}])
+
+.controller('LoginCtrl', ['$scope', 'Auth', '$location', 'fbutil', function($scope, Auth, $location, fbutil) {
+  $scope.email = null;
+  $scope.pass = null;
+  $scope.confirm = null;
+  $scope.createMode = false;
+
+  $scope.login = function(email, pass) {
+    $scope.err = null;
+    Auth.$authWithPassword({ email: email, password: pass }, {rememberMe: true})
+    .then(function(/* user */) {
+      $location.path('/appointment');
+    }, function(err) {
+      $scope.err = errMessage(err);
     });
-  }])
+  };
 
-  .controller('LoginCtrl', ['$scope', 'Auth', '$location', 'fbutil', function($scope, Auth, $location, fbutil) {
-    $scope.email = null;
-    $scope.pass = null;
-    $scope.confirm = null;
-    $scope.createMode = false;
-
-    $scope.login = function(email, pass) {
-      $scope.err = null;
-      Auth.$authWithPassword({ email: email, password: pass }, {rememberMe: true})
-        .then(function(/* user */) {
-          $location.path('/account');
-        }, function(err) {
-          $scope.err = errMessage(err);
-        });
-    };
-
-    $scope.createAccount = function() {
-      $scope.err = null;
-      if( assertValidAccountProps() ) {
-        var email = $scope.email;
-        var pass = $scope.pass;
+  $scope.createAccount = function() {
+    $scope.err = null;
+    if( assertValidAccountProps() ) {
+      var email = $scope.email;
+      var pass = $scope.pass;
         // create user credentials in Firebase auth system
         Auth.$createUser({email: email, password: pass})
-          .then(function() {
+        .then(function() {
             // authenticate so we have permission to write to Firebase
             return Auth.$authWithPassword({ email: email, password: pass });
           })
-          .then(function(user) {
+        .then(function(user) {
             // create a user profile in our data store
             var ref = fbutil.ref('users', user.uid);
             return fbutil.handler(function(cb) {
               ref.set({email: email, name: name||firstPartOfEmail(email)}, cb);
             });
           })
-          .then(function(/* user */) {
+        .then(function(/* user */) {
             // redirect to the account page
-            $location.path('/account');
+            $location.path('/appointment');
           }, function(err) {
             $scope.err = errMessage(err);
           });

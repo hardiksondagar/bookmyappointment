@@ -14,7 +14,6 @@
             angular.forEach(value, function(subvalue, subkey) {
               if(typeof subvalue=="object" && subvalue)
               {
-                console.log(key);
                 $scope.appointments.push(subvalue);
               }
             });
