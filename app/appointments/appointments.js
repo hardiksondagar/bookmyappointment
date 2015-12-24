@@ -8,7 +8,6 @@
     var orderBy = $filter('orderBy');
 
     $scope.user=Profile.get();
-    console.log($scope.user);
     $scope.isAdmin=false;
 
 
@@ -17,19 +16,7 @@
 
       if($scope.user.role==="admin"){
         $scope.isAdmin=true;
-        $scope.appointments=[];
-        $scope.rawData = appointmentList.all();
-        $scope.rawData.$loaded().then(function () {
-          angular.forEach($scope.rawData, function(value, key) {
-            angular.forEach(value, function(subvalue, subkey) {
-              if(typeof subvalue=="object" && subvalue)
-              {
-                $scope.appointments.push(subvalue);
-              }
-            });
-          });
-        });
-        
+        $scope.appointments = appointmentList.all();
       } else {
         $scope.appointments = appointmentList.get($scope.user.$id);
       }
@@ -43,11 +30,18 @@
     };
     $scope.order('timestamp', true);
 
+    $scope.remove=function(appointment)
+    {
+
+      appointmentList.delete(appointment.uid,appointment.id);
+      $scope.appointments = appointmentList.all();
+    }
+
   }]);
 
-app.service('appointmentList', ['fbutil', '$firebaseArray', function(fbutil, $firebaseArray) {
+  app.service('appointmentList', ['fbutil', '$firebaseArray','$firebaseObject', function(fbutil, $firebaseArray, $firebaseObject) {
 
-  return {
+    return {
       // Get student's all the appointments ( for student )
       get: function (uid) {
         var ref=fbutil.ref('appointments', uid);
@@ -56,9 +50,27 @@ app.service('appointmentList', ['fbutil', '$firebaseArray', function(fbutil, $fi
       // Get all the students appointments ( for admin )
       all:function () {
         var ref=fbutil.ref('appointments');
-        return $firebaseArray(ref);
+        var rawData=$firebaseArray(ref);
+        var appointments=[];
+        rawData.$loaded().then(function () {
+          angular.forEach(rawData, function(value, key) {
+            angular.forEach(value, function(subvalue, subkey) {
+              if(typeof subvalue=="object" && subvalue)
+              {
+                subvalue.uid=value.$id;
+                subvalue.id=subkey;
+                appointments.push(subvalue);
+              }
+            });
+          });
+        });
+        return appointments;
+      },
+      delete:function(uid,id)
+      {
+        var ref=fbutil.ref('appointments',uid);
+        return $firebaseObject(ref).$remove(id);
       }
-
     };
   }]);  
 

@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"time",
+				"timestamp"
+			],
+			[
+				"sms",
+				"smsBody"
+			],
+			[
+				"json",
+				"json_decode"
+			],
+			[
+				"cons",
+				"const"
+			],
+			[
+				"se",
+				"send"
+			],
+			[
+				"send",
+				"sendSMS"
+			],
+			[
+				"u",
+				"uid"
+			],
+			[
+				"DE",
+				"DEFAULT_PATH"
+			],
+			[
+				"di",
+				"disabled	Attr"
+			],
+			[
+				"ms",
+				"messages"
+			],
+			[
 				"border-r",
 				"border-radius"
 			],
@@ -76,10 +116,6 @@
 				"facebook_profile"
 			],
 			[
-				"json",
-				"json_encode"
-			],
-			[
 				"gethostbyna",
 				"gethostbyname"
 			],
@@ -118,10 +154,6 @@
 			[
 				"redi",
 				"redirectUrl"
-			],
-			[
-				"di",
-				"display"
 			],
 			[
 				"fon",
@@ -280,20 +312,12 @@
 				"form_id"
 			],
 			[
-				"se",
-				"serialize"
-			],
-			[
 				"param",
 				"parameter"
 			],
 			[
 				"conve",
 				"conversation"
-			],
-			[
-				"u",
-				"username"
 			],
 			[
 				"exi",
@@ -490,51 +514,11 @@
 			[
 				"elee",
 				"elementInner"
-			],
-			[
-				"tag",
-				"taglistTwo"
-			],
-			[
-				"filter",
-				"filterWith"
-			],
-			[
-				"tagl",
-				"taglistTwo"
-			],
-			[
-				"tagL",
-				"taglistTwo"
-			],
-			[
-				"taglis",
-				"taglistOne"
-			],
-			[
-				"val",
-				"value"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "app/index.html",
-			"settings":
-			{
-				"buffer_size": 4512,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/config.js",
-			"settings":
-			{
-				"buffer_size": 1039,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -573,39 +557,93 @@
 	},
 	"expanded_folders":
 	[
-		"/var/www/fiverr/bookmyappointment",
-		"/var/www/fiverr/bookmyappointment/app",
-		"/var/www/fiverr/bookmyappointment/app/account",
-		"/var/www/fiverr/bookmyappointment/app/appointment",
-		"/var/www/fiverr/bookmyappointment/app/appointments",
-		"/var/www/fiverr/bookmyappointment/app/components",
-		"/var/www/fiverr/bookmyappointment/app/components/auth",
-		"/var/www/fiverr/bookmyappointment/app/components/firebase.utils",
-		"/var/www/fiverr/bookmyappointment/app/home",
-		"/var/www/fiverr/bookmyappointment/app/login"
+		"/var/www/firebase/cozywait/src",
+		"/var/www/firebase/cozywait/src/app",
+		"/var/www/firebase/cozywait/src/app/auth",
+		"/var/www/firebase/cozywait/src/app/core",
+		"/var/www/firebase/cozywait/src/app/landing",
+		"/var/www/firebase/cozywait/src/app/layout",
+		"/var/www/firebase/cozywait/src/app/waitList",
+		"/var/www/firebase/cozywait/src/app/waitList/directives",
+		"/var/www/firebase/cozywait/src/assets",
+		"/var/www/firebase/cozywait/src/assets/css"
 	],
 	"file_history":
 	[
+		"/var/www/firebase/cozywait/src/app/core/firebaseData.service.js",
+		"/var/www/firebase/cozywait/src/app/auth/auth.service.js",
+		"/var/www/firebase/cozywait/src/app/core/textMessage.service.js",
+		"/var/www/firebase/cozywait/src/app/auth/config.route.js",
+		"/var/www/firebase/cozywait/src/app/auth/authForm.html",
+		"/var/www/firebase/cozywait/src/app/auth/auth.controller.js",
+		"/var/www/firebase/cozywait/src/app/auth/auth.module.js",
+		"/var/www/firebase/cozywait/src/app/auth/register.html",
+		"/var/www/firebase/cozywait/src/app/waitList/directives/partyTable.directive.js",
+		"/var/www/mark42/app/webroot/cozywait/index.php",
+		"/var/www/firebase/cozywait/src/app/waitList/directives/partyTable.html",
+		"/var/www/firebase/cozywait/src/app/waitList/waitList.html",
+		"/var/www/firebase/cozywait/src/app/waitList/waitList.module.js",
+		"/var/www/firebase/cozywait/src/app/waitList/directives/partyForm.directive.js",
+		"/var/www/firebase/cozywait/src/app/waitList/config.route.js",
+		"/var/www/firebase/cozywait/src/app/waitList/waitList.controller.js",
+		"/var/www/firebase/cozywait/src/app/core/party.service.js",
+		"/var/www/firebase/cozywait/src/app/waitList/directives/partyForm.html",
+		"/var/www/firebase/cozywait_php/index.php",
+		"/var/www/mark9/login.html",
+		"/var/www/mark9/index.html",
+		"/var/www/mark9/assets/js/main.js",
+		"/var/www/mark9/assets/js/order.js",
+		"/var/www/firebase/cozywait/src/app/layout/navbar.html",
+		"/var/www/firebase/cozywait/src/app/layout/navbar.directive.js",
+		"/var/www/firebase/cozywait/src/app/auth/authForm.directive.js",
+		"/var/www/firebase/cozywait/src/app/landing/landing.html",
+		"/var/www/firebase/cozywait/src/app/landing/landing.module.js",
+		"/var/www/firebase/cozywait/src/app/auth/login.html",
+		"/var/www/firebase/cozywait/src/assets/css/app.css",
+		"/var/www/firebase/cozywait/src/app/app.module.js",
+		"/var/www/firebase/cozywait/README.md",
+		"/var/www/firebase/cozywait/.git/config",
+		"/var/www/firebase/cozywait/security_rules.json",
+		"/var/www/firebase/cozywait_php/vendor/autoload.php",
+		"/var/www/mark42/app/Lib/MSG91.php",
+		"/var/www/ionic/ionic-tutorial/mark7/www/js/services.js",
+		"/var/www/ionic/ionic-tutorial/mark7/www/js/controllers.js",
+		"/var/www/fiverr/nsscapstone/app/register/register.js",
+		"/var/www/firebase/cozywait_php/vendor/ktamas77/firebase-php/src/firebaseInterface.php",
+		"/var/www/firebase/cozywait_php/vendor/ktamas77/firebase-php/src/firebaseStub.php",
+		"/var/www/firebase/cozywait_php/vendor/ktamas77/firebase-php/src/firebaseLib.php",
+		"/var/www/firebase/cozywait_php/vendor/msg91/MSG91.php",
+		"/var/www/mark42/app/Lib/Event/UserListener.php",
+		"/var/www/mark42/app/Console/Command/AppShell.php",
+		"/var/www/firebase/cozywait_php/vendor/composer/ClassLoader.php",
+		"/var/www/firebase/cozywait_php/vendor/composer/autoload_real.php",
+		"/var/www/firebase/cozywait/src/index.html",
+		"/var/www/mws/app/Config/core.php",
+		"/var/www/mws/app/Config/bootstrap.php",
+		"/var/www/fiverr/bookmyappointment/app/index.html",
+		"/var/www/fiverr/bookmyappointment/app/appointment/appointment.js",
+		"/var/www/fiverr/bookmyappointment/app/appointments/appointments.html",
+		"/var/www/fiverr/bookmyappointment/app/appointments/appointments.js",
+		"/var/www/firebase/elonmusk/app/login/login.js",
+		"/home/wayne/.config/sublime-text-3/Packages/User/Default.sublime-theme",
+		"/var/www/firebase/elonmusk/app/index.html",
 		"/var/www/firebase/elonmusk/app/app.css",
+		"/var/www/firebase/cozywait/src/app/core/constants.js",
+		"/home/wayne/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/var/www/fiverr/bookmyappointment/app/config.js",
 		"/var/www/firebase/elonmusk/app/bower_components/ngtweet/dist/ngtweet.js",
 		"/var/www/fiverr/bookmyappointment/app/bower_components/jquery/src/effects/Tween.js",
 		"/var/www/firebase/elonmusk/app/home/home.html",
 		"/var/www/firebase/elonmusk/app/home/home.js",
 		"/var/www/firebase/elonmusk/bower.json",
 		"/var/www/firebase/elonmusk/firebase.json",
-		"/var/www/firebase/elonmusk/app/index.html",
 		"/var/www/fiverr/bookmyappointment/app/style.css",
 		"/var/www/firebase/elonmusk/app/app.js",
 		"/var/www/fiverr/bookmyappointment/app/appointment/appointment.html",
-		"/var/www/fiverr/bookmyappointment/app/appointment/appointment.js",
 		"/var/www/firebase/elonmusk/security-rules.json",
 		"/var/www/fiverr/bookmyappointment/app/app.js",
 		"/var/www/fiverr/bookmyappointment/app/components/auth/auth.js",
 		"/var/www/fiverr/sivan1995/lib/portcheck.php",
-		"/var/www/fiverr/bookmyappointment/app/index.html",
-		"/var/www/fiverr/bookmyappointment/app/appointments/appointments.html",
-		"/var/www/fiverr/bookmyappointment/app/appointments/appointments.js",
-		"/var/www/fiverr/nsscapstone/app/register/register.js",
 		"/var/www/fiverr/bookmyappointment/app/account/account.js",
 		"/var/www/firebase/elonmusk/security_rules.json",
 		"/var/www/fiverr/bookmyappointment/security-rules.json",
@@ -620,7 +658,6 @@
 		"/var/www/fiverr/nsscapstone/app/addInvoice/addInvoice.js",
 		"/var/www/fiverr/bookmyappointment/app/components/firebase.utils/firebase.utils.js",
 		"/var/www/fiverr/bookmyappointment/app/components/firebase.utils/firebase.utils_test.js",
-		"/var/www/fiverr/bookmyappointment/app/config.js",
 		"/var/www/fiverr/bookmyappointment/app/components/security/security.js",
 		"/var/www/fiverr/bookmyappointment/app/components/reverse/reverse-filter_test.js",
 		"/var/www/fiverr/bookmyappointment/app/components/ngcloak/ngcloak-decorator.js",
@@ -660,60 +697,7 @@
 		"/var/www/ionic/ionic-tutorial/mark7/www/js/app.js",
 		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/framework/includes/shortcode-generator-backup/cj_shortcode_generator_panel.php",
 		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/framework/framework.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/templates/partials/ticket.html",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/templates/partials/tickets.html",
-		"/var/www/fiverr/sivan1995/lib/neighbour.php",
-		"/var/www/fiverr/sivan1995/lib/address.php",
-		"/var/www/fiverr/sivan1995/lib/whois.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/framework/includes/admin_ajax.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/options/cjsupport_emails_ticket_status.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/modules/functions/app/ticket_comment.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/templates/app.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/modules/functions/app/tickets.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/modules/functions/post_columns.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/modules/functions/lang.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/templates/partials/includes/form-builder.html",
-		"/var/www/fiverr/sivan1995/bower.json",
-		"/var/www/fiverr/nsscapstone/bower.json",
-		"/var/www/fiverr/sivan1995/.git/config",
-		"/var/www/fiverr/sivan1995/bower_components/angular/bower.json",
-		"/var/www/fiverr/sivan1995/bower_components/bootstrap/bower.json",
-		"/var/www/fiverr/sivan1995/style.css",
-		"/var/www/fiverr/sivan1995/lib/meta.php",
-		"/var/www/fiverr/sivan1995/script.js",
-		"/var/www/fiverr/sivan1995/whoislookupscript.php",
-		"/var/www/fiverr/sivan1995/whois.php",
-		"/var/www/fiverr/sivan1995/jumbotron-narrow.css",
-		"/tmp/fz3temp-1/ticket.html",
-		"/tmp/fz3temp-1/form-builder.html",
-		"/tmp/fz3temp-1/ticket-create.html",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/modules/functions/plugin_setup.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/modules/functions/app/home.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/templates/partials/ticket-create-client.html",
-		"/var/www/fiverr/member-director/app/Config/Schema/controllers.js",
-		"/tmp/fz3temp-1/ticket-create-client.html",
-		"/tmp/fz3temp-1/ticketnee.html",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/templates/partials/includes/canned-responses.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/templates/partials/ticket-create.html",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/framework/includes/shortcode_form.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/framework/includes/admin_form_raw.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/index.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/item_setup.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/templates/index.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/assets/lib/wysiwyg/ng-tinymce.js",
-		"/tmp/fz3temp-1/debug.php",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/assets/lib/wysiwyg/tinymce/LICENSE.TXT",
-		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/templates/partials/tickets-public.html",
-		"/var/www/wordpress/nacrasailing/wp-config.php",
-		"/var/www/ionic/ionic-tutorial/mark7/plugins/cordova-plugin-x-toast/README.md",
-		"/var/www/9quark/wp-content/themes/Heap-Installer-1-5-9/heap/functions.php",
-		"/var/www/ionic/ionic-tutorial/mark7/plugins/cordova-plugin-x-toast/www/Toast.js",
-		"/var/www/9quark/wp-content/themes/Heap-Installer-1-5-9/heap/theme-partials/post-templates/loop-content/header-classic.php",
-		"/var/www/9quark/wp-content/themes/Heap-Installer-1-5-9/heap/theme-partials/post-templates/loop-content/header-masonry.php",
-		"/var/www/9quark/wp-content/themes/Heap-Installer-1-5-9/heap/theme-partials/wpgrade-partials/social-icons-list.php",
-		"/var/www/9quark/wp-content/themes/Heap-Installer-1-5-9/heap/theme-partials/wpgrade-partials/addthis-js-config.php",
-		"/var/www/9quark/wp-includes/default-filters.php",
-		"/var/www/9quark/wp-includes/functions.php"
+		"/var/www/wordpress/nacrasailing/wp-content/plugins/cj-supportezzy/templates/partials/ticket.html"
 	],
 	"find":
 	{
@@ -935,69 +919,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4512,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1656,
-								1656
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 285.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/config.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1039,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								539,
-								539
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1041,7 +964,7 @@
 		"height": 112.0
 	},
 	"pinned_build_system": "",
-	"project": "bookmyappointment.sublime-project",
+	"project": "cozywait.sublime-project",
 	"replace":
 	{
 		"height": 94.0
@@ -1053,6 +976,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"navb",
+				"src/app/layout/navbar.html"
+			],
+			[
+				"register",
+				"src/app/auth/register.html"
+			],
 			[
 				"conf",
 				"app/config.js"
@@ -1552,18 +1487,6 @@
 			[
 				"eventcont",
 				"app/Controller/EventsController.php"
-			],
-			[
-				"defau",
-				"app/View/Layouts/default.ctp"
-			],
-			[
-				"pagehome",
-				"app/View/Pages/home.ctp"
-			],
-			[
-				"postindex",
-				"app/View/Posts/index.ctp"
 			]
 		],
 		"width": 0.0

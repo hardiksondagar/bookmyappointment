@@ -7,15 +7,23 @@
 		<input type="email" id="inputEmail" class="form-control" placeholder="Email address" ng-model="appointment.email" ng-hide="loggedIn">
 		<label for="inputEmail" class="sr-only">Date</label>
 		<div class="dropdown" ng-show="loggedIn">
-		<a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" >
+			<a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" >
 				<div class="input-group">
-				  <input type="text" class="form-control" data-ng-model="appointment.date" placeholder="Date">
-				  <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
+					<input type="text" class="form-control" data-ng-model="appointment.date" placeholder="Date">
+					<span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
 				</div>
 			</a>
 			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				<datetimepicker data-ng-model="appointment.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"/>
 			</ul>
+		</div>
+		<br>
+		<div class="form-group">
+			<label>Subjects</label>
+			<div ng-repeat="item in list">
+				<input type="checkbox" checkbox-group />
+				<label>{{item.value}}</label>
+			</div>
 		</div>
 
 		<label for="inputComment" class="sr-only">Comment</label>

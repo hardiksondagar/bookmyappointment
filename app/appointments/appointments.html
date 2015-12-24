@@ -9,6 +9,7 @@
 				<th ng-click="order('date')">Date
 					<span class="sortorder" ng-show="predicate === 'date'" ng-class="{'fa fa-caret-down':reverse,'fa fa-caret-up':!reverse}"></span>
 				</th>
+				<th>Subjects</th>
 				<th>Actions</th>
 			</tr>
 		</thead> 
@@ -16,6 +17,14 @@
 			<tr ng-repeat="appointment in appointments"> 
 				<td>{{appointment.message}}</td>
 				<td>{{appointment.date | date:'medium'}}</td>
+				<td>
+					<ol ng-if="appointment.subjects">
+						<li ng-repeat="subject in appointment.subjects" ng-bind="subject">
+							
+						</li>
+					</ol>
+					<span ng-if="!appointment.subjects">No subject selected</span>
+				</td>
 				<td><button class="btn btn-warning btn-sm" ng-click="appointments.$remove(appointment)">Delete</button></td>
 			</tr> 
 		</tbody>
@@ -43,16 +52,24 @@
 					{{appointment.email}}
 				</td>
 				<td>
-					<div ng-if="appointment.date">
-						<strong>Time</strong><br>{{appointment.date | date:'medium'}}
+					<div ng-if="appointment.message">
+						<strong>Message</strong><br>{{appointment.message}}<br>
 					</div>
 
-					<div ng-if="appointment.message">
-						<strong>Message</strong><br>{{appointment.message}}
+					<div ng-if="appointment.date">
+						<strong><br>Time</strong><br>{{appointment.date | date:'medium'}}
 					</div>
+
+					<div ng-if="appointment.subjects">
+						<label><br>Subjects</label>
+						<li ng-repeat="subject in appointment.subjects" ng-bind="subject">
+
+						</li>
+					</div>
+
 				</td>
 				<td><label class="label label-info">{{appointment.isRegistered?'Registed':'Quick'}}</label></td>
-				<td><button class="btn btn-warning btn-sm" ng-click="appointments.$remove(appointment)">Delete</button></td>
+				<td><button class="btn btn-warning btn-sm" ng-click="remove(appointment)">Delete</button></td>
 			</tr> 
 		</tbody>
 	</table>
