@@ -17,8 +17,9 @@
 				<datetimepicker data-ng-model="appointment.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"/>
 			</ul>
 		</div>
-		<br>
-		<div class="form-group">
+		
+		<div class="form-group" ng-show="loggedIn">
+			<br>
 			<label>Subjects</label>
 			<div ng-repeat="item in list">
 				<input type="checkbox" checkbox-group />
